@@ -2,22 +2,28 @@ public class QuadForm {
 
   public static void main(String[] args){
   
-    double a;
-    double b;
-    double c;
     
-    a = Double.parseDouble(args[0]);
-    b = Double.parseDouble(args[1]);
-    c = Double.parseDouble(args[2]);
+        //variable are used the same way such as seen in formula
+        double a;
+        double b;
+        double c;
+        
     
-    double discriminant = (b**2.0) - 4.0*(a*c);
-    double numerator = Math.sqrt(discriminant);
+        //takes in command arguments
+        a = Double.parseDouble(args[0]);
+        b = Double.parseDouble(args[1]);
+        c = Double.parseDouble(args[2]);
     
-    double root_a = (-b + numerator)/2.0 * a;
-    double root_b = (-b - numerator)/2.0 * a;
-    
-    System.out.println(root_a);
-    System.out.println(root_b);
+        // setting the discriminant function
+        double discriminant = Math.pow(b, 2) - 4.0*(a*c);
+        double numerator = Math.sqrt(discriminant);
+        
+        //results in both positive and negative roots
+        double root_a = (-Math.abs(b) + numerator)/2.0 * a;
+        double root_b = (-Math.abs(b) - numerator)/2.0 * a;
+        
+        System.out.println(root_a);
+        System.out.println(root_b);
     
   
   }
